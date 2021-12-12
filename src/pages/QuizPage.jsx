@@ -152,7 +152,7 @@ const PrepareStage = () => {
             )}`}
           </Typography>
         </Box>
-        <Box mt="20vh">
+        <Box mt="20vh" mb="30vh" overflow={'auto'}>
           <Box>
             <Typography variant="h6" className={classes.category}>
               {questionsByApi[currentIndexQuestion]?.category}
