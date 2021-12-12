@@ -1,5 +1,3 @@
-// import { Backdrop, CircularProgress } from '@material-ui/core';
-// import React, { Suspense } from 'react';
 import React from 'react';
 import { Routes as Router, Route } from 'react-router';
 
@@ -7,13 +5,17 @@ import { Routes as Router, Route } from 'react-router';
  * Paginas
  */
 import Dashboard from './pages/Dashboard';
-import Dashboard2 from './pages/Dashboard2';
+import PrepareStage from './pages/PrepareStage';
+import QuizPage from './pages/QuizPage';
+import ResultPage from './pages/ResultPage';
 
 export default function Routes() {
   return (
     <Router>
       <Route path="/" element={<Dashboard />} />
-      <Route path="/2" element={<Dashboard2 />} />
+      <Route path="/prepare" element={<PrepareStage />} />
+      <Route path="/quiz" element={<QuizPage />} />
+      <Route path="/result" element={<ResultPage />} />
     </Router>
   );
 }
