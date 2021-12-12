@@ -36,12 +36,15 @@ const Dashboard = () => {
 
   const formik = useFormik({
     initialValues: {
-      qtdQuestions: localStorage?.getItem('qtdQuestionsChoose') || 0,
+      qtdQuestions: localStorage?.getItem('qtdQuestionsChoose') || 1,
     },
     validate: (values) => {
       const errors = {};
-      if (values.qtdQuestions > 50) {
+      if (values.qtdQuestions > 50 || values.qtdQuestions < 1) {
         errors.qtdQuestions = 'The question limit is 50.';
+      }
+      if ( values.qtdQuestions < 1) {
+        errors.qtdQuestions = 'The question limit is 1.';
       }
       return errors;
     },
